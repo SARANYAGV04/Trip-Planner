@@ -9,8 +9,10 @@ const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/travel', {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+   serverSelectionTimeoutMS: 30000, // 30 seconds
+
 })
 console.log('Connected to MongoDB');
 
