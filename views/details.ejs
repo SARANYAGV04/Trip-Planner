@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Details</title>
+<link rel="stylesheet" href="/first.css">
+</head>
+<body>
+    <div id="whole">
+    <h1 id="heading">Travel Details for <span id="destination"> <%= travel.destination %></span></h1><br>  
+    <div id="current">
+    <p class="details"><strong>DURATION:</strong> <%= travel.duration %> days</p><br>
+    <p class="details"><strong>COST:</strong> $<%= travel.cost %></p><br>
+</div>
+
+    <h2 id="heading">Update Travel Entry</h2>
+
+    <form action="/update/<%= travel.destination %>" method="post" id="form1">
+        <label for="duration">Duration (days):</label>
+        <input  type="number" name="duration" value="<%= travel.duration %>" required class="input1">
+<br><br>
+        <label for="cost">Cost ($):</label>
+        <input type="number" name="cost" value="<%= travel.cost %>" required class="input2">
+        <br><br>
+        <button type="submit">UPDATE TRAVEL</button>
+    </form>
+<br>
+    <h2 id="heading">Delete Travel Entry</h2>
+    <form action="/delete/<%= travel.destination %>" method="POST">
+        <button type="submit" id="delBtn">DELETE TRAVEL</button>
+    </form>
+<div id="backtoHome">
+    <a href="/" class="addnew"><button id="addnewBtn">CONFIRM TRAVEL ENTRY</button></a>
+    <a class="addnew" href="/add"><button id="addnewBtn"> NEW TRAVEL ENTRY</button></a>
+</div>
+</div>
+</body>
+</html>

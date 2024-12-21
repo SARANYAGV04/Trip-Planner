@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Travel Entry</title>
+    <link rel="stylesheet" href="second.css">
+</head>
+<body>
+    <div id="whole">
+    <h1 id="heading">ADD NEW TRAVEL ENTRY HERE</h1>
+    <form action="/add" method="POST">
+        <label for="destination">Destination:</label>
+        <input type="text" name="destination" required class="input1">
+<br><br>
+        <label for="duration">Duration (days):</label >
+        <input type="number" name="duration" required class="input2">
+<br><br>
+        <label for="cost">Cost ($):</label>
+        <input type="number" name="cost" required class="input3">
+<br><br>
+        <button type="submit">ADD TRAVEL</button>
+    </form>
+    <a href="/" class="backAll">Back to All Travel Entries</a>
+  </div>
+</body>
+</html>

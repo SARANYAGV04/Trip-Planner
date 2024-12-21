@@ -1,0 +1,13 @@
+[
+    {
+        "destination": "Paris",
+        "duration": 5,
+        "cost": 1500
+    },
+    {
+        "destination": "Tokyo",
+        "duration": 7,
+        "cost": 2000
+         
+    }
+]
